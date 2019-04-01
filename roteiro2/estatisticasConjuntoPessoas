@@ -1,0 +1,33 @@
+contMasc,contFemi,contSalario,contSalarioMasc,contGeral = 0,0,0,0,0
+maiorSalaM,maiorSalaF,somaMasc,somaFemi,salarioMasc,salarioFemi = 0,0,0,0,0,0
+
+for i in range(10):
+    salario = float(input())
+    sexo = str(input())
+    if(sexo == "m"):
+        contSalarioMasc += 1
+        somaMasc += salario
+        contMasc += 1
+        if(salario > maiorSalaM):
+            maiorSalaM = salario
+        else:
+            maiorSalaM = maiorSalaM
+        
+    elif(sexo == "f"):
+        somaFemi += salario
+        contFemi += 1
+        if(salario > maiorSalaF):
+            maiorSalaF = salario
+        else:
+            maiorSalaF = maiorSalaF
+            
+    contGeral += 1
+
+print(contMasc)
+print(contFemi)
+print("{:.1f}".format((somaMasc + somaFemi)/contGeral))
+if(maiorSalaF > maiorSalaM):
+    print("f")
+elif(maiorSalaF < maiorSalaM):
+    print("m")
+print("{:.1f}".format(somaMasc/contMasc))
