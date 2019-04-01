@@ -1,0 +1,27 @@
+nomeJogMaiorPont,nomeJogMenorPont = "",""
+soma,cont = 0,0
+menorPont,maiorPont = 100,0
+
+nomeJogador = str(input())
+
+if(nomeJogador == "sair"):
+    print("Nenhum jogador foi registrado.")
+else:        
+    while(nomeJogador != "sair"):
+        pontuacao = int(input())
+
+        if(pontuacao >= maiorPont):
+            maiorPont = pontuacao
+            nomeJogMaiorPont = nomeJogador
+        if(pontuacao <= menorPont):
+            menorPont = pontuacao
+            nomeJogMenorPont = nomeJogador
+
+        soma+=pontuacao
+        cont+=1
+
+        nomeJogador = str(input())
+
+    print(nomeJogMenorPont)
+    print(nomeJogMaiorPont)
+    print("{:.2f}".format(soma/cont) if(soma!=0) else "0.00")
