@@ -1,0 +1,22 @@
+primeiroValor = 0
+dia = 0
+diaP = 0
+soma = 0
+valorInicial = float(input())
+primeiroValor = valorInicial
+
+for i in range(6):
+    valor = float(input())
+    soma = soma + valor
+    if((valor > valorInicial) >= 0.5):
+        diaP = 1
+        dia += 1
+        valor = valorInicial
+    
+total = soma + primeiroValor
+print("R$", "{:.2f}".format(total))
+diaT = dia+diaP
+if(diaT == 7):
+    print(diaT - 1)
+else:
+    print(diaT)
