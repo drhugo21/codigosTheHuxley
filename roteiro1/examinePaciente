@@ -1,0 +1,13 @@
+temp = float(input())
+dor = str(input())
+
+if(temp >= 37 and dor == "S"):
+    print("Exames Especiais")
+elif(temp >= 37 and dor == "N"):
+    print("Exames Basicos")
+elif(temp < 37 and dor == "N"):
+    print("Liberado")
+elif(temp <37 and dor == "S"):
+    print("Exames Basicos")
+else:
+    print("Erro")
