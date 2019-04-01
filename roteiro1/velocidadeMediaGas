@@ -1,0 +1,4 @@
+import math
+tempK = float(input())
+massaM = float(input())
+print(("{:.2f}".format(math.sqrt((3*8.31*tempK)/massaM))))
