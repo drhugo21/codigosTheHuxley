@@ -1,0 +1,2 @@
+real = float(input())
+print(("{:.2f}".format(real*3.55)))
