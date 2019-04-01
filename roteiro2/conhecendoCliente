@@ -1,0 +1,38 @@
+contVenda,contVendaVista = 0,0
+valorVista,valorCartao = 0,0
+totalVendas = 0
+menorIdade = 0
+maiorCompra = 0
+media = 0
+continuar = "S"
+
+while(continuar != "N"):
+    idade = int(input())
+    valorCompra = float(input())
+    formaPagamento = str(input())
+    
+    if (valorCompra > maiorCompra):
+        maiorCompra = valorCompra
+    if(formaPagamento == "V"):
+        valorVista += valorCompra
+        contVendaVista +=1
+    elif(formaPagamento == "C"):
+        valorCartao += valorCompra
+    if(idade < menorIdade):
+        menorIdade = idade
+    if (contVenda == 0):
+        menorIdade = idade
+        
+    contVenda += 1
+    totalVendas += valorCompra
+    continuar = str(input())
+
+print(contVenda)
+print(round(valorVista,2))
+print(round(valorCartao,2))
+print(menorIdade)
+print(round(maiorCompra,2))
+
+if (valorVista > 0):
+    media = valorVista/contVendaVista
+print(round(media,2))
