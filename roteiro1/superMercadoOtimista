@@ -1,0 +1,14 @@
+dia = str(input())
+precoP = float(input())
+opcaoP = str(input())
+nomeP = str(input())
+
+if((dia == "seg" or dia == "ter" or dia == "qua") and opcaoP == "ouro"):
+    print("O preco do produto", nomeP ,"no dia", dia ,"eh", round((precoP/2),2))
+elif((dia == "qui" or dia == "sex") and (10 <= precoP <= 100)):
+    print("O preco do produto", nomeP ,"no dia", dia ,"eh", round((precoP/3),2))
+elif(dia == "sab" and opcaoP == "prata"):
+    print("O preco do produto", nomeP ,"no dia", dia ,"eh", round((precoP*3),2))
+else:
+    print("O preco do produto", nomeP ,"no dia", dia ,"eh", round((precoP*2),2))
+    
