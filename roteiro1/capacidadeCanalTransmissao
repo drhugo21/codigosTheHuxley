@@ -1,0 +1,6 @@
+taxaV = float(input())
+taxaA = float(input())
+dados = float(input())
+capacidade = float(input())
+QDmax = (taxaV*5.2 + taxaA*3.4 + dados*1.5) / capacidade
+print("%.2f"%QDmax)
