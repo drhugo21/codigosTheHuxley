@@ -1,0 +1,6 @@
+soma,cont = 0,0
+while(soma < 19):
+    quant = int(input())
+    soma += quant
+    cont+=1
+print(cont-1)
