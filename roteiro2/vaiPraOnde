@@ -1,0 +1,15 @@
+melhorKM = 0
+melhorCidade = " "
+nomeCidade = str(input())
+while (nomeCidade.upper()!="FIM"):
+    km = int(input())
+    valor = float(input())
+    if (km > melhorKM) and (valor * 2 <= 300):
+        melhorCidade = nomeCidade.upper()
+        melhorKM = km
+
+    nomeCidade = str(input())
+if (melhorCidade == " "):
+    print("SEM DESTINO")
+else:
+    print(melhorCidade)
