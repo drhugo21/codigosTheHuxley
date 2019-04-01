@@ -1,0 +1,12 @@
+somaMaior = 0
+valorMaior = 0
+for i in range(5):
+    num  = int(input())
+    soma = 0
+    for j in range(1,num+1):
+        if(num%j == 0):
+            soma+=j
+    if(soma > somaMaior):
+        somaMaior = soma
+        valorMaior = num
+print(valorMaior)
