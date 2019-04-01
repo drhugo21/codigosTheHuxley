@@ -1,0 +1,16 @@
+menorCRE,soma,cont = 11,0,0
+menorMatricula = ""
+
+matricula = str(input())
+while(matricula != "999"):
+    cre = float(input())
+    if(cre < menorCRE):
+        menorCRE = cre
+        menorMatricula = matricula
+    soma+=cre
+    cont+=1
+    
+    matricula = str(input())
+
+print(menorMatricula)
+print("{:.2f}".format(soma/cont))
