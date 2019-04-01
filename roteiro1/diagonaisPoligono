@@ -1,0 +1,2 @@
+lado = int(input())
+print(("{:.0f}".format((lado*(lado-3))/2)))
