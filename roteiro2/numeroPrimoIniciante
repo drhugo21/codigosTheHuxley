@@ -1,0 +1,11 @@
+valor = int(input())
+while(valor >= 0):
+    if(valor == 1):
+        print(0)
+    elif(valor == 2):
+        print(1)
+    elif(valor % 2 == 0):
+        print(0)
+    else:
+        print(1)
+    valor = int(input())
