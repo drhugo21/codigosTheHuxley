@@ -1,0 +1,25 @@
+maiorVelocidade = 0
+maiorAno = 0
+cont = 0
+soma = 0
+entrada = str(input())
+while(entrada!="n" or entrada!="N"):
+    if(entrada=="n" or entrada=="N"):
+        break
+    ano = int(input())
+    velocidade = float(input())
+    cont+=1
+    soma += velocidade
+    if(velocidade > maiorVelocidade):
+        maiorVelocidade = velocidade
+    if(ano>maiorAno):
+        maiorAno = ano
+    entrada = str(input())
+    
+if(cont!=0):
+    print("{:.2f}".format(maiorVelocidade))
+    print(maiorAno)
+    media = soma/cont
+    print("{:.2f}".format(media))
+else:
+    print("zero")
