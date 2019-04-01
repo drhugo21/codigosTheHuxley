@@ -1,0 +1,16 @@
+num1 = int(input())
+num2 = int(input())
+if (num1 == 0 and num2 == 0):
+    print("Sobre a origem")
+elif (num1 == 0):
+    print("Sobre o eixo y")
+elif (num2 == 0):
+    print("Sobre o eixo x")
+elif (num1>0 and num2>0):
+    print("Primeiro Quadrante")
+elif (num1<0 and num2>0):
+    print("Segundo Quadrante")
+elif (num1<0 and num2<0):
+    print("Terceiro Quadrante")
+else:
+    print("Quarto Quadrante")
