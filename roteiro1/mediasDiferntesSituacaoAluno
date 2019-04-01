@@ -1,0 +1,37 @@
+op = str(input())
+if(op == "h" or op == "p" or op == "a"):
+    nota1 = float(input())
+    nota2 = float(input())
+    nota3 = float(input())
+    if(op == "h"):
+        media = 3/((1/nota1)+(1/nota2)+(1/nota3))
+        print(round(media,2))
+        if(70 <= media <= 100):
+            print("Aprovado")
+        elif(40 <= media < 70):
+            print("Final")
+        elif(40 > media):
+            print("Reprovado")
+    elif(op == "p"):
+        peso1 = float(input())
+        peso2 = float(input())
+        peso3 = float(input())
+        media = ((nota1*peso1)+(nota2*peso2)+(nota3*peso3))/(peso1+peso2+peso3)
+        print(round(media,2))
+        if(70 <= media <= 100):
+            print("Aprovado")
+        elif(40 <= media < 70):
+            print("Final")
+        elif(40 > media):
+            print("Reprovado")
+    elif(op == "a"):
+        media = (nota1+nota2+nota3)/3
+        print(round(media,2))
+        if(70 <= media <= 100):
+            print("Aprovado")
+        elif(40 <= media < 70):
+            print("Final")
+        elif(40 > media):
+            print("Reprovado")
+else:
+    print("Escolha um tipo de media valida.")
