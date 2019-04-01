@@ -1,0 +1,17 @@
+num1 = int(input())
+num2 = int(input())
+if (num1 > num2):
+    numMenor = num2
+    num2 = num1
+    num1 = numMenor
+for i in range(num2, num1 - 1, -1):
+    cont = 0
+    primo = 1
+    for j in range(1, i):
+        if (i % j == 0):
+            cont += 1
+        if (cont > 1):
+            primo = 0
+    if (primo):
+        if (i != 1):
+            print(i)
