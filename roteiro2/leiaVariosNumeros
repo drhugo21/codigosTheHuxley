@@ -1,0 +1,5 @@
+valor = int(input())
+while(valor>=0):
+    print(valor)
+    valor = int(input())
+print(valor)
