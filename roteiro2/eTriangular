@@ -1,0 +1,12 @@
+num = int(input())
+contador = 0
+
+for i in range(num):
+    equacao = i * (i+1) * (i+2)
+    if(equacao == num):
+        print(i,"*",i+1,"*",i+2,"=",num)
+        print("Verdadeiro")
+        contador += 1
+if(contador == 0):
+    print("Falso")
+        
