@@ -1,0 +1,15 @@
+quantX,totalX,soma = 0,0,0
+
+for i in range(1,8):
+    quant = int(input())
+    tamanho = str(input())
+    
+    if(tamanho == "P" or tamanho =="p"):
+        soma += quant*10
+    elif(tamanho == "G" or tamanho =="g"):
+        soma += quant*16
+        
+quantX = soma /(3.5)
+
+print(soma)
+print(round(quantX))
