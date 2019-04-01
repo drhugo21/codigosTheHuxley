@@ -1,0 +1,25 @@
+time = str(input())
+if((time == "GSW") or (time == "HOU") or (time == "CLE") or (time == "BOS")):
+    #entradas
+    nome = str(input())
+    arreTent2 = int(input())
+    arreConv2 = int(input())
+    arreTent3 = int(input())
+    arreConv3 = int(input())
+    
+    #calculos
+    pontosTotais = ((arreConv2*2) + (arreConv3*3))
+    percAcerto2pts = (arreConv2/arreTent2)*100
+    percAcerto3pts = (arreConv3/arreTent3)*100
+    
+    #decisoes
+    if(pontosTotais > 30):
+        print("O time", time ,"estah jogando, e", nome ,"estah indo bem.")
+    elif(percAcerto2pts > 50 and arreTent2 > 10):
+        print("O time", time ,"estah jogando, e", nome ,"estah indo bem.")
+    elif(percAcerto3pts > 40 and arreTent3 > 7):
+        print("O time", time ,"estah jogando, e", nome ,"estah indo bem.")
+    else:
+       print("O time", time ,"estah jogando, mas", nome ,"nao estah indo bem.")
+else:
+    print("Nenhum time de interesse jogando.")
