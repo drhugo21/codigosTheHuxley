@@ -1,0 +1,134 @@
+tipoC = str(input())
+
+if(tipoC == "C"):
+    paoAlho = str(input())
+    bebidaA = str(input())
+    bebidaC = str(input())
+    quantC = int(input())
+    quantA = int(input())
+    precoCarneBoi = (quantA * 0.2) * 32
+    precoCarneFrango = (quantA * 0.1) * 18
+    precoCarneSuina = (quantA * 0.1) * 15
+    precoCarneBoiC = (quantC * 0.2) * 32
+    precoCarnes = precoCarneBoi + precoCarneFrango + precoCarneSuina + precoCarneBoiC
+    if(bebidaA == "S" and bebidaC == "S"):
+        precoCerveja = (quantA*2) * 8
+        precoRefri = (quantC*0.5) * 6
+        precoT = precoCarnes + precoCerveja + precoRefri
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+    elif(bebidaA == "S"):
+        precoCerveja = (quantA*2) * 8
+        precoT = precoCarneBoi + precoCarneFrango + precoCarneSuina + precoCarneBoiC + precoCerveja
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+    elif(bebidaC == "S"):
+        precoRefri = (quantC*0.5) * 6
+        precoT = precoCarneBoi + precoCarneFrango + precoCarneSuina + precoCarneBoiC + precoRefri
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+    else:
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoCarnes))
+        elif(paoAlho == "N"):
+            precoF = precoCarnes - (precoCarnes * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+            print("R$:","{:.2f}".format(precoF))
+
+elif(tipoC == "BF"):
+    paoAlho = str(input())
+    bebidaA = str(input())
+    bebidaC = str(input())
+    quantC = int(input())
+    quantA = int(input())
+    precoCarneBoi = (quantA * 0.25) * 32
+    precoCarneFrango = (quantA * 0.15) * 18
+    precoCarneBoiC = (quantC * 0.2) * 32
+    precoCarnes = precoCarneBoi + precoCarneFrango + precoCarneBoiC
+    if(bebidaA == "S" and bebidaC == "S"):
+        precoCerveja = (quantA*2) * 8
+        precoRefri = (quantC*0.5) * 6
+        precoT = precoCarnes + precoCerveja + precoRefri
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+    elif(bebidaA == "S"):
+        precoCerveja = (quantA*2) * 8
+        precoT = precoCarneBoi + precoCarneFrango + precoCarneBoiC + precoCerveja
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+            print("R$:","{:.2f}".format(precoF))
+    elif(bebidaC == "S"):
+        precoRefri = (quantC*0.5) * 6
+        precoT = precoCarneBoi + precoCarneFrango + precoCarneBoiC + precoRefri
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+            print("R$:","{:.2f}".format(precoF))
+    else:
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoCarnes))
+        elif(paoAlho == "N"):
+            precoF = precoCarnes - (precoCarnes * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+            print("R$:","{:.2f}".format(precoF))
+
+elif(tipoC == "BS"):
+    paoAlho = str(input())
+    bebidaA = str(input())
+    bebidaC = str(input())
+    quantC = int(input())
+    quantA = int(input())
+    precoCarneBoi = (quantA * 0.25) * 32
+    precoCarneSuina = (quantA * 0.15) * 15
+    precoCarneBoiC = (quantC * 0.2) * 32
+    precoCarnes = precoCarneBoi + precoCarneSuina + precoCarneBoiC
+    if(bebidaA == "S" and bebidaC == "S"):
+        precoCerveja = (quantA*2) * 8
+        precoRefri = (quantC*0.5) * 6
+        precoT = precoCarnes + precoCerveja + precoRefri
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+    elif(bebidaA == "S"):
+        precoCerveja = (quantA*2) * 8
+        precoT = precoCarneBoi + precoCarneSuina + precoCarneBoiC + precoCerveja
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+    elif(bebidaC == "S"):
+        precoRefri = (quantC*0.5) * 6
+        precoT = precoCarneBoi + precoCarneSuina + precoCarneBoiC + precoRefri
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoT))
+        elif(paoAlho == "N"):
+            precoF = precoT - (precoT * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+    else:
+        if(paoAlho == "S"):
+            print("R$:","{:.2f}".format(precoCarnes))
+        elif(paoAlho == "N"):
+            precoF = precoCarnes - (precoCarnes * 0.02)
+            print("R$:","{:.2f}".format(precoF))
+            print("R$:","{:.2f}".format(precoF))
+else:
+    print("Op��o inv�lida.")
