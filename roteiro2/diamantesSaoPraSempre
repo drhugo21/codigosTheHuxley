@@ -1,0 +1,22 @@
+n = int(input())
+cont,cont2,cont3,cont4 = 0,0,0,0
+
+for i in range(n):
+    var = n - cont
+    var2 = 1 + cont2
+    
+    print("."*var,end="")
+    print("*"*var2)
+    
+    cont += 1
+    cont2 += 2
+
+for j in range(n):
+    var = 1 + cont3
+    var2 = ((n*2)-1) - cont4
+    
+    print("."*var,end="")
+    print("*"*var2)
+    
+    cont3 += 1
+    cont4 += 2
