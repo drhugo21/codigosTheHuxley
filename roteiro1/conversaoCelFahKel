@@ -1,0 +1,26 @@
+entrada = str(input())
+num = float(input())
+if(entrada == "C"):
+    if(num >= (-273.0)):
+        eq1 = (num*1.8) + 32
+        eq2 = num + 273.15
+        print(("{:.2f}".format(eq1)),"F")
+        print(("{:.2f}".format(eq2)),"K")
+    else:
+        print("Valor de temperatura abaixo do minimo")
+elif(entrada == "F"):
+    if(num >= (-459.67)):
+        eq1 = (num-32)/1.8
+        eq2 = (num+459.67)/1.8
+        print(("{:.2f}".format(eq1)),"C")
+        print(("{:.2f}".format(eq2)),"K")
+    else:
+        print("Valor de temperatura abaixo do minimo")       
+elif(entrada == "K"):
+    if(num >= 0):
+        eq1 = num - 273.15
+        eq2 = (num * 1.8) - 459.67
+        print(("{:.2f}".format(eq1)),"C")
+        print(("{:.2f}".format(eq2)),"F")
+    else:
+        print("Valor de temperatura abaixo do minimo")
