@@ -1,0 +1,15 @@
+n = int(input())
+soma = 0
+divisores = 1
+num = 1
+
+while(num<n):
+    while(divisores<=n):
+        if(num%divisores == 0):
+            soma += divisores
+        divisores += 1
+    if(soma == 2*num):
+        print(num)
+    soma = 0
+    num += 1
+    divisores = 1
