@@ -1,0 +1,5 @@
+QUANTL = float(input())
+QUANTF = float(input())
+TAMEQ = float(input())
+NUMB = float(input())
+print((QUANTL/QUANTF) / TAMEQ - 4.2 * NUMB)
