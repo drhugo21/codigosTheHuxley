@@ -1,0 +1,14 @@
+valor = int(input())
+cont = 0
+soma = 0
+while (valor != 0):
+    cont = cont+1
+    soma += valor
+    valor = int(input())
+media = soma/cont
+if(media<110):
+    print("Glicose Normal")
+elif(media >= 200):
+    print("Glicose Muito Alta")
+else:
+    print("Glicose Alterada")
