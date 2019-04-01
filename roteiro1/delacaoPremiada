@@ -1,0 +1,49 @@
+crimeDor = str(input())
+
+if(crimeDor == "roubo"):
+    valorDor = float(input())
+    crimeDel = str(input())
+    if(crimeDel == "roubo"):
+        valorDel = float(input())
+        if(valorDel > (valorDor*5)):
+            print("Dela��o concedida.")
+        else:
+            print("Dela��o rejeitada.")
+    elif(crimeDel == "tr�fico"):
+        valorDel = float(input())
+        if(valorDel > (valorDor*3)):
+            print("Dela��o concedida.")
+        else:
+            print("Dela��o rejeitada.")
+    elif(crimeDel == "homic�dio"):
+        print("Dela��o concedida.")
+    else:
+        print("Crime inv�lido.")
+        
+elif(crimeDor == "tr�fico"):
+    valorDor = float(input())
+    crimeDel = str(input())
+    if(crimeDel == "tr�fico"):
+        valorDel = float(input())
+        if(valorDel > (valorDor*5)):
+            print("Dela��o concedida.")
+        else:
+            print("Dela��o rejeitada.")
+    elif(crimeDel == "roubo"):
+        valorDel = float(input())
+        print("Dela��o rejeitada.")
+    elif(crimeDel == "homic�dio"):
+        print("Dela��o concedida.")
+    else:
+        print("Crime inv�lido.")
+
+elif(crimeDor == "homic�dio"):
+    crimeDel = str(input())
+    if(crimeDel == "homic�dio"):
+        print("Dela��o concedida.")
+    else:
+        valorDel = float(input())
+        print("Dela��o rejeitada.")
+
+else:
+    print("Crime inv�lido.")
