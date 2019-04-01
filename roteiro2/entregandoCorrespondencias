@@ -1,0 +1,10 @@
+dia = 0
+soma = 0
+for i in range(7):
+    quantCartas = int(input())
+    soma += quantCartas
+    if(quantCartas > 99):
+        dia+=1
+        
+print(dia)
+print(round(soma/7))
