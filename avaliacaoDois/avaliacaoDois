@@ -1,0 +1,51 @@
+#Sobre a Avaliação REPETIÇÃO: Questionário com perguntas subjetivas (1a parte - 2 questões):
+#Como o senhor sabe que o meu não me deixou responder, as respostas são:
+#Nº1: 48 vezes o programa vai printar "oi"
+#Nº2: Os números printados serão 2,4 e 6
+
+#2a parte:
+
+
+#Altura e "base", usei base pra lembrar a equação do paralelepipedo (P = Porta)
+halturaP = int(input())
+baseP = int(input())
+
+#Largura do colchão
+#Nos códigos que eu faço, eu peço a entrada que vai ser comparada antes
+#Aí quanto termina o laço while eu pergunto novamente, aí enquanto for diferente de 0 ele roda o código
+larguraC = int(input())
+
+while(larguraC != 0):
+    
+    #Comprimento e altura do colchão (C=Colchão)
+    comprimentoC = int(input())
+    alturaC = int(input())
+
+    #Decisão 1: Se o comprimento ou altura forem menores que 1, ou seja, serem 0 ou negativos, o programa exibe
+    #A mensagem das dimensões inválidas
+    #Caso as duas medidas forem maiores que 0, aí a gente continua a execução
+    if(comprimentoC < 1 or alturaC < 1):
+        print("DIMENSOES INVALIDAS")
+    else:
+        #Agora eu faço as comparações
+
+        
+        #Se a largura do colchão for menor ou igual a altura da porta
+        #Ou se o comprimento do colchão for menor ou igual a altura da porta
+        #E a altura do colchão dor menor ou igual a base (largura) da porta
+            #O colchão passa
+        if( (larguraC <= halturaP or comprimentoC <= halturaP) and (alturaC <= baseP) ):
+            print("PASSA")
+            
+        #Porém, se a largura do colchão for menor ou igual a base da porta
+        #E a altura do colchão for menor ou igual a altura da porta
+            #Então passa
+        elif(larguraC <= baseP and alturaC <= halturaP):
+            print("PASSA")
+            
+        #Se nenhum dos casos atrás for contemplado, então o colchão emperra
+        else:
+            print("EMPERRA")
+
+    larguraC = int(input())
+        
