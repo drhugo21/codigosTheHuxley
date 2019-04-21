@@ -1,0 +1,11 @@
+quant = int(input())
+soma = 0
+lista = [0]*(quant)
+
+for i in range(quant):
+    latas,copos = map(int,input().split(" "))
+    lista[0] = latas
+    lista[1] = copos
+    if(lista[0]>lista[1]):
+        soma += copos
+print(soma)
