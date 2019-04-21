@@ -1,0 +1,23 @@
+quant = int(input())
+lista = [0]*(quant)
+
+for i in range(quant):
+    valor = int(input())
+    lista[i] = valor
+
+posicao = int(input())
+valorNovo = int(input())
+
+print("[",end=" ")        
+for j in range(len(lista)):
+    print(lista[j],end=" ")
+print("]")
+
+if(posicao > len(lista)):
+    print("A posicao",posicao,"estah fora do intervalo")
+else:
+    lista = lista[:(posicao)] + [valorNovo] + lista[posicao:]
+    print("[",end=" ")        
+    for k in range(len(lista)):
+        print(lista[k],end=" ")
+    print("]")
