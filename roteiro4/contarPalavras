@@ -1,0 +1,13 @@
+frase = str(input())
+nome=" "
+cont = 1 
+for i in range(len(frase)):
+    if(frase[i] != " "):
+        nome += frase[i]
+    else:
+        for k in range(i-1,len(frase)-1):
+            if(frase[k] == " "):
+                break
+            nome += " "
+            cont+=1
+print(cont)
