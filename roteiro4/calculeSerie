@@ -1,0 +1,11 @@
+quant = int(input())
+soma,cont,novaS = 0,3,""
+if(quant == 0):
+    print("0.00")
+else:
+    for i in range(1,quant+1):
+        novaS += (str(i)+("/")+str(i*3)+(" + "))
+        soma += (i/(i*cont))
+
+    print(novaS[:-3])
+    print(round(soma,2))
