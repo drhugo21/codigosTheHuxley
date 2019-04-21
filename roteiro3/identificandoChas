@@ -1,0 +1,16 @@
+lista = []
+cont = 0
+
+tipoCha = int(input())
+
+if(1 <= tipoCha <= 4):
+    valores = input().split(" ")
+    lista = valores
+    lista = list(map(int,valores))
+
+    for j in range(len(lista)):
+        if(1 <= lista[j] <= 4):
+            if(lista[j] == tipoCha):
+                cont+=1
+
+print(cont)
