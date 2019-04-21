@@ -1,0 +1,21 @@
+quant = int(input())
+lista = [0]*quant
+soma,contMais,contMenos = 0,0,0
+
+for i in range(quant):
+    notas = int(input())
+    lista[i] = notas
+    soma += notas
+
+media = soma/quant
+
+for j in range(len(lista)):
+    if(lista[j] > (media + (0.1*media))):
+        contMais += 1
+    elif(lista[j] < (media - (0.1*media))):
+        contMenos += 1
+
+
+print("{:.2f}".format(media))
+print(contMais)
+print(contMenos)
