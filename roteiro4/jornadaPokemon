@@ -1,0 +1,7 @@
+numero = str(input())
+if (numero == "1"):
+    print("Bulbassauro")
+elif (numero == "2"):
+    print("Charmander")
+else:
+    print("Squirtle")
