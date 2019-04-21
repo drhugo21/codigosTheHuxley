@@ -1,0 +1,13 @@
+cont = 0
+lista = [0]*10
+
+for i in range(10):
+    num = int(input())
+    lista[i] = num
+
+numProcurar = int(input())    
+
+for j in range(len(lista)):
+    if numProcurar == lista[j]:
+        cont += 1
+print(cont)
