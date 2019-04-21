@@ -1,0 +1,16 @@
+quant = int(input())
+cont,soma = 0,0
+novaS = ""
+
+for i in range(quant):
+    if(i%2 == 0):
+        valor = (i+1)/(4*(cont+1))
+        soma += valor
+        novaS += str(i+1)+("/")+str(4*(cont+1))+(" + ")
+        cont +=1
+    else:
+        soma += 1
+        novaS += "1 + "
+        
+print("{:.2f}".format(soma))
+print(novaS[:-2])
