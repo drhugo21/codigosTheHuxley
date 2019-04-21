@@ -1,0 +1,15 @@
+quant = int(input())
+for i in range(quant):
+    palavra = str(input())
+    cont = 0
+    while(cont != 1):
+        cont = 1
+        for j in range(len(palavra)):
+            if(j+1 < len(palavra)):
+                if(palavra[j] == palavra[j+1]):
+                    palavra = palavra[:j] + palavra[(j+1):]
+                    cont = 0
+        if(cont == 1):
+            break
+    
+    print(palavra)
