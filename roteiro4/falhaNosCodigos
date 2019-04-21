@@ -1,0 +1,14 @@
+numero = str(input())
+for i in numero:
+    if (numero[6] == "b"):
+        print("Bulbassauro")
+        break
+    elif (numero[6] == "c"):
+        print("Charmander")
+        break
+    elif (numero[6] == "s"):
+        print("Squirtle")
+        break
+    else:
+        print("Codigo Invalido")
+        break
