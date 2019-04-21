@@ -1,0 +1,4 @@
+numero = str(input())
+for i in numero:
+    print(numero[::-1])
+    break
