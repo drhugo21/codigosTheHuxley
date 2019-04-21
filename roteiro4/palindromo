@@ -1,0 +1,10 @@
+quant = int(input())
+semEspaco = ""
+for i in range(quant):
+    palavra = str(input()).lower()
+    palavra = ''.join(palavra.split())
+
+    if(palavra == palavra[::-1]):
+        print("SIM")
+    else:
+        print("NAO")
