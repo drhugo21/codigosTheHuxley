@@ -1,0 +1,26 @@
+numero = str(input())
+numeros = ["0","1","2","3","4","5","6","7","8","9","O","o","l"]
+
+while(numero != "FIM"):
+    novaS = ""
+    booleano = True
+    for i in range(len(numero)):
+        if(numero[i] == "o"):
+            novaS += "0"
+        elif(numero[i] == "O"):
+            novaS += "0"
+        elif(numero[i] == "l"):
+            novaS += "1"
+        else:
+            novaS += numero[i]
+
+    for j in range(len(novaS)):
+        if not (novaS[j] in numeros):
+            booleano = False
+
+    if(booleano == True):
+        print(int(novaS))
+    else:
+        print("ERRO")
+        
+    numero = str(input())
