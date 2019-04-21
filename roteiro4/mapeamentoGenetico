@@ -1,0 +1,25 @@
+seqIni = str(input())
+seqBuscada = str(input())
+cadeiaMaior,cadeiaAchada,posicao = 0,0,0
+booleano = True
+
+if (seqBuscada in seqIni):
+    for i in range(len(seqIni)):
+        if(seqBuscada == seqIni[i]):
+            cadeiaAchada += 1
+        else:
+            cadeiaAchada = 0
+        
+        if(cadeiaMaior < cadeiaAchada):
+            cadeiaMaior = cadeiaAchada
+            posicao = i
+else:
+    booleano = False
+                
+
+
+if(booleano == False):
+    print("ERRO")
+else:
+    print(posicao-(cadeiaMaior-1))
+    print(cadeiaMaior)
