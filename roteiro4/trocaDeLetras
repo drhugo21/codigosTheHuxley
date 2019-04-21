@@ -1,0 +1,21 @@
+dicionarioErro = ["3","4","1","5"]
+dicionarioCerto = ["E","A","I","S"]
+booleano = True
+while (booleano):
+    palavra = str(input()).upper()
+    novaS =(" ")*len(palavra)
+    for i in range(len(palavra)):
+        if (palavra[i] in dicionarioErro):
+            for j in range(len(dicionarioErro)):
+                if (palavra[i] == dicionarioErro[j]):
+                    novaS = novaS[0:i] + dicionarioCerto[j] + novaS[i:]
+                    break
+        else:
+            novaS = novaS[0:i] + palavra[i] + novaS[i:]
+            
+    novaS = novaS.upper()
+    novaS = novaS[:len(palavra)]
+    if (novaS == "FIM") or (novaS == "SAIR"):
+        break
+    else:
+        print(novaS)
