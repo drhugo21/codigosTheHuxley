@@ -1,0 +1,4 @@
+frase1 = str(input())
+frase2 = str(input())
+fraseFinal = frase1+frase2
+print(fraseFinal)
