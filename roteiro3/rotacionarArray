@@ -1,0 +1,13 @@
+quant = int(input())
+lista = [0]*quant
+for i in range(quant):
+    valores = int(input())
+    lista[i] = valores
+    
+rotacoes = int(input())
+
+for j in range(quant):
+    if ((rotacoes + j) < quant):
+        print(lista[(rotacoes + j)])
+    else:
+        print(lista[(rotacoes + j)-quant])
