@@ -1,0 +1,14 @@
+quan = int(input())
+
+l1 = [0]*quan
+l2 = [0]*quan
+
+for i in range(quan):
+    v = int(input())
+    l1[i] = v
+for i in range(quan):
+    v = int(input())
+    l2[i] = v
+for i in range(quan):
+    print(l1[i])
+    print(l2[i])
