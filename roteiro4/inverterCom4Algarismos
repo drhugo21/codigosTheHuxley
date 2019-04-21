@@ -1,0 +1,6 @@
+numero = str(input())
+novaS = ""
+for i in numero:
+    novaS += numero[::-1]
+    print(int(novaS))
+    break
