@@ -1,0 +1,13 @@
+contCinema,contBoliche = 0,0
+
+for i in range(7):
+    passeio = str(input()).upper()
+    if(passeio == "CINEMA"):
+        contCinema += 1
+    else:
+        contBoliche += 1
+
+if(contCinema > contBoliche):
+    print("CINEMA")
+else:
+    print("BOLICHE")
