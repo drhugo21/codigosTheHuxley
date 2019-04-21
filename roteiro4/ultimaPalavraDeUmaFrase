@@ -1,0 +1,2 @@
+palavra = str(input()).split()
+print(palavra[-1])
