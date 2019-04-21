@@ -1,0 +1,20 @@
+cont = 1
+soma = 0
+quant = int(input())
+
+if(quant < 1 or quant > 5):
+    print("Numero de notas invalido.")
+else:
+    lista = [0]*quant
+    for i in range(quant):
+        notas = float(input())
+        lista[i] = notas
+        soma += notas
+
+    for j in range(len(lista)):
+        print(str("Nota"),str(cont)+str(":"),str(lista[j]))
+        cont+=1
+
+    media = soma/quant
+    
+    print("Media:","{:.2f}".format(media))
