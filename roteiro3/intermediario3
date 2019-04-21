@@ -1,0 +1,13 @@
+lista = [0]*3
+for i in range(3):
+    num = int(input())
+    lista[i] = num
+
+for j in range(len(lista)):
+    for k in range(len(lista)):
+        if(lista[j] > lista[k]):
+            variavelAuxiliar = lista[k]
+            lista[k] = lista[j]
+            lista[j] = variavelAuxiliar
+
+print(lista[1])
