@@ -1,0 +1,11 @@
+frase = str(input()).split()
+booleano = 0
+
+for i in range(len(frase)):
+    if(booleano):
+        frase[i] = (frase[i])[::-1]
+        booleano = 0
+    else:
+        booleano = 1
+
+print(" ".join(frase))
