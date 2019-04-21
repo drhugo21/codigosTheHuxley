@@ -1,0 +1,25 @@
+quant = int(input())
+lista = [0]*quant
+
+for i in range(quant):
+    valores = int(input())
+    lista[i] = valores
+
+posicao = int(input())
+
+print("[",end=" ")
+for j in range(quant):
+    print(lista[j],end=" ")
+print("]")
+
+
+if(lista == []):
+    print("A lista estah vazia - nao eh possivel remover elemento")
+elif(posicao in lista):
+    lista = lista[0:(lista.index(posicao))] + lista[(lista.index(posicao)+1):]
+    print("[",end=" ")
+    for l in range(len(lista)):
+        print(lista[l],end=" ")
+    print("]")
+else:
+    print("Nao eh possivel remover o elemento",posicao)
