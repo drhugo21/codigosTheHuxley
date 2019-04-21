@@ -1,0 +1,11 @@
+tamanho = int(input())
+lista = list(map(int,str(input()).split(" ")))
+menorValor,posicao = lista[0],0
+
+for j in range(tamanho):
+    if(lista[j] <= menorValor):
+        menorValor = lista[j]
+        posicao = j
+            
+print("Menor valor:", menorValor)
+print("Posicao:", posicao)
