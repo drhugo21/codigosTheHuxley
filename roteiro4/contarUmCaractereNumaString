@@ -1,0 +1,7 @@
+palavra = str(input())
+letra = str(input())
+cont = 0
+for i in palavra:
+    if(i == letra):
+        cont+=1
+print(cont)
