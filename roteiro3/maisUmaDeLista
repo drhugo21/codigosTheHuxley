@@ -1,0 +1,26 @@
+quant = int(input())
+
+if(quant > 0):
+    lista = [0]*(quant)
+    soma = 0
+    
+    for i in range(quant):
+        valores = int(input())
+        lista[i] = valores
+            
+    if(quant%2 == 0):    
+        for j in range(len(lista)):
+            soma += ((lista[j] - lista[-(j+1)])**2)
+        print("S =","{:.0f}".format(soma/2))
+
+    else:
+        lista = lista[:(quant//2)] + [0] + lista[quant//2:]
+        for j in range(len(lista)):
+            soma += ((lista[j] - lista[-(j+1)])**2)
+        print("S =","{:.0f}".format(soma/2))
+
+elif(quant == 0):
+    print("Lista vazia - O valor de S eh zero")
+    
+else:
+    print("O valor informado para N foi negativo")
