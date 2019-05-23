@@ -1,0 +1,38 @@
+letrasLet = ['@', '3', '1', '0', '7', '5']
+numeroSubstituir = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+palavra = str(input())
+novaS = ""
+cont,quant = 0,0
+if(palavra == " "):
+    print("erro")
+    print(0)
+else:
+    for i in range(len(palavra)):
+        if(palavra[i] in numeroSubstituir):
+            print("numeros")
+            print(0)
+            cont = 1
+            break
+        elif(palavra[i] == "a" or palavra[i] =="A"):
+            novaS+= "@"
+            quant +=1
+        elif(palavra[i] == "e" or palavra[i] == "E"):
+            novaS += "3"
+            quant +=1
+        elif(palavra[i] == "i" or palavra[i] == "I"):
+            novaS += "1"
+            quant +=1
+        elif(palavra[i] == "o" or palavra[i] == "O"):
+            novaS += "0"
+            quant += 1
+        elif(palavra[i]== "t" or palavra[i]== "T"):
+            novaS += "7"
+            quant += 1
+        elif(palavra[i] == "s" or palavra[i]=="S"):
+            novaS += "5"
+            quant += 1
+        else:
+            novaS += palavra[i]
+    if(cont != 1):
+        print(novaS[::-1])
+        print(quant)
