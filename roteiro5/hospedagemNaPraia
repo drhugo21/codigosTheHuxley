@@ -1,0 +1,15 @@
+def CalculaHospedagem(tipoAp,quantDias):
+    preco = 0
+    if(tipoAp == "INDIVIDUAL"):
+        preco = 125*quantDias
+    elif(tipoAp == "SUÍTE DUPLA"):
+        preco = 140*quantDias
+    elif(tipoAp == "SUÍTE TRIPLA"):
+        preco = 180*quantDias
+
+    if(quantDias >= 3):
+        return preco - (preco * 0.15)
+    else:
+        return preco
+
+print("{:.2f}".format(CalculaHospedagem(str(input()).upper(),int(input()))))
