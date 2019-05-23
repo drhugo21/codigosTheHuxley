@@ -1,0 +1,19 @@
+def maior(valor1,valor2,valor3):
+    lista = [0]*3
+    lista[0] = valor1
+    lista[1] = valor2
+    lista[2] = valor3
+    
+    for j in range(len(lista)):
+        for k in range(len(lista)): 
+            if(lista[j] > lista[k]):
+                variavelAuxiliar = lista[k]
+                lista[k] = lista[j]
+                lista[j] = variavelAuxiliar
+
+    return lista[0]
+
+a,b,c = input().split()
+a,b,c = int(a),int(b),int(c)
+
+print(maior(a,b,c),"eh o maior")
