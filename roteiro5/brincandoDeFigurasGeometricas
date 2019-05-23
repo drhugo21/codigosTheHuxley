@@ -1,0 +1,50 @@
+def quadrado(lado):
+    if(lado < 0):
+        return -1
+    else:
+        return lado*lado
+
+def retangulo(base,haltura):
+    if(base < 0 or haltura < 0):
+        return -1
+    else:
+        return base*haltura
+
+def circulo(raio):
+    if(raio < 0):
+        return -1
+    else:
+        return 3.14*(raio*raio)
+
+
+cont,maiorC,maiorR,maiorQ,percCirc,contC = 0,-100,-100,-100,0,0
+tipoF = str(input())
+
+while (tipoF != "sair"):
+
+    if(tipoF == "q"):
+        qua = quadrado(int(input()))
+        if(qua > maiorQ):
+            maiorQ = qua
+    elif(tipoF == "r"):
+        ret = retangulo(int(input()),int(input()))
+        if(ret > maiorR):
+            maiorR = ret
+    elif(tipoF == "c"):
+        cir = circulo(int(input()))
+        if(cir > maiorC):
+            maiorC = cir
+        contC += 1
+    
+    cont += 1
+
+    tipoF = str(input())
+
+percCirc = (contC/cont)*100
+
+
+print("Maior circulo:", "{:.2f}".format(maiorC))
+print("Maior retangulo:", "{:.2f}".format(maiorR))
+print("Maior quadrado:", "{:.2f}".format(maiorQ))
+print("Quantidade de figuras", cont)
+print("Percentual de circulos:", "{:.2f}".format(percCirc))
