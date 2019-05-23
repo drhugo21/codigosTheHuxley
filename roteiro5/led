@@ -1,0 +1,32 @@
+def calcular_leds(digito):
+    cont = 0
+    for i in range(len(digito)):
+        
+        if(digito[i] == "0"):
+            cont+=6
+        if(digito[i] == "1"):
+            cont+=2
+        if(digito[i] == "2"):
+            cont+=5
+        if(digito[i] == "3"):
+            cont+=5
+        if(digito[i] == "4"):
+            cont+=4
+        if(digito[i] == "5"):
+            cont+=5
+        if(digito[i] == "6"):
+            cont+=6
+        if(digito[i] == "7"):
+            cont+=3
+        if(digito[i] == "8"):
+            cont+=7
+        if(digito[i] == "9"):
+            cont+=6
+            
+    return cont
+
+quant = int(input())
+
+for i in range(quant):
+    entrada = calcular_leds(str(input()))
+    print(entrada,"leds")
