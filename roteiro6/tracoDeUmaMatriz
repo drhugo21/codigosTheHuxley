@@ -1,0 +1,19 @@
+dimensao = int(input())
+
+matriz = []
+for linha in range(dimensao):
+    matriz.append(input().split())
+
+soma = 0
+
+print("tr(A) = ",end="")
+for linha in range(len(matriz)):
+    for coluna in range(len(matriz)):
+        if(linha == coluna):
+            soma += float(matriz[linha][coluna])
+            if(coluna != len(matriz)-1):
+                print("({:.2f}) + ".format(float(matriz[linha][coluna])),end="")
+            else:
+                print("({:.2f}) = ".format(float(matriz[linha][coluna])),end="")
+
+print("{:.2f}".format(soma))
