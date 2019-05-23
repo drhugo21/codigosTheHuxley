@@ -1,0 +1,25 @@
+def escolheAtaque(nome,dese,quantG,nivelC,nivelE):
+    indice = 0
+    if( (dese == 0 and quantG == 0) or (dese == 0 and nivelC == 0) or (dese == 0 and nivelE == 0)):
+        indice = 0
+        return indice
+    elif( (quantG == 0 and nivelC == 0) or (quantG == 0 and nivelE == 0) ):
+        indice = 0
+        return indice
+    elif(nivelC == 0 and nivelE == 0):
+        indice = 0
+        return indice
+    else:
+        indice = (dese*2)+(quantG*3.5)+(nivelC*1.5)+(nivelE*2)
+        return indice
+
+lista = [0]*5
+for i in range(len(lista)):
+    entrada = escolheAtaque(str(input()),int(input()),int(input()),int(input()),int(input()))
+    lista[i] = entrada
+
+lista.sort()
+
+print(lista[4])
+print(lista[3])
+print(lista[2])
