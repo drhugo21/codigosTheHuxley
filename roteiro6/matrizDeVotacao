@@ -1,0 +1,13 @@
+p = int(input())
+e = int(input())
+
+matriz = []
+for linha in range(e):
+    matriz.append(input().split())
+
+for linha in range(p):
+    cont = 0
+    for coluna in range(e):
+        if(matriz[coluna][linha] == "1"):
+            cont+=1
+    print("Princesa",str(linha+1)+":",cont,"voto(s)")
