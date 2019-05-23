@@ -1,0 +1,12 @@
+def ClassificaAluno(media,quantF):
+    if(quantF > 10):
+        return "REPROVADO POR FALTAS"
+    else:
+        if(9.5 > media >= 7):
+            return "APROVADO"
+        elif(media >= 9.5):
+            return "APROVADO COM LOUVOR"
+        else:
+            return "REPROVADO"
+
+print(ClassificaAluno(float(input()),int(input())))
