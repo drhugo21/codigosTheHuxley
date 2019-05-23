@@ -1,0 +1,23 @@
+matriz = []
+credito,debito = 0,0
+while True:
+    linha = []
+    a = input().split()
+    
+    if (int(a[0]) == -1):
+        break
+    linha.append(int(a[0]))
+    linha.append(float(a[1]))
+    matriz.append(linha)
+    
+    linha = []
+
+for i in matriz:
+    if(i[0] == 0):
+        debito += i[1]
+    elif(i[0] == 1):
+        credito += i[1]
+
+print("Creditos: R$","{:.2f}".format(credito))
+print("Debitos: R$","{:.2f}".format(debito))
+print("Saldo: R$","{:.2f}".format(credito-debito))
