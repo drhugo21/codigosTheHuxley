@@ -1,0 +1,11 @@
+matriz = []
+for i in range(3):
+  matriz.append(input().split())
+
+valores = input().split()
+
+for i in range(3):
+    novoPreco = 0
+    for j in range(4):
+        novoPreco += float(matriz[i][j])*float(valores[j])
+    print("%.2f"%novoPreco) 
