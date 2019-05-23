@@ -1,0 +1,13 @@
+def somasSucessivas(valor1,valor2):
+    soma = 0
+    if(valor1 >= 0):
+        for i in range(valor1):
+            soma += valor2
+        return soma
+    else:
+        valorF = valor1*(-1)
+        for i in range(valorF):
+            soma += valor2
+        return soma*(-1)
+
+print(somasSucessivas(int(input()),int(input())))
