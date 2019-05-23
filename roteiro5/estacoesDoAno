@@ -1,0 +1,12 @@
+def estacao(dia,mes):
+    if( (9 <= mes <= 12 and dia >= 21) or (dia <= 20 and mes == 12) ):
+        return "PRIMAVERA"
+    elif( (12 <= mes <= 3 and dia >= 21) or (dia <= 20 and mes == 3) ):
+        return "VERAO"
+    elif( (3 <= mes <= 6 and dia >= 21) or (dia <= 20 and mes == 6) ):
+        return "OUTONO"
+    else:
+        return "INVERNO"
+
+
+print(estacao(int(input()),int(input())))
