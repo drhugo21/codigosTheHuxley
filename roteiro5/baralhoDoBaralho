@@ -1,0 +1,63 @@
+def calculoPonto(valor1,valor2,valor3):
+    cont = 0
+    soma = valor1+valor2+valor3
+
+    lista = [0]*3
+    lista[0] = valor1
+    lista[1] = valor2
+    lista[2] = valor3
+    
+    for j in range(len(lista)):
+        for k in range(len(lista)): 
+            if(lista[j] > lista[k]):
+                variavelAuxiliar = lista[k]
+                lista[k] = lista[j]
+                lista[j] = variavelAuxiliar
+        
+
+    if(lista[0] == lista[1] and lista[2] == lista[0]):
+        cont += valor1
+        
+    if((lista[2] == lista[1] - 1) and (lista[1] == lista[0] - 1)):
+        cont += valor1
+    
+    if(lista[2] == lista[1] and lista[2] < lista[0]):
+        valorN1 = (lista[2]//2)
+        cont += valorN1
+    if(lista[1] == lista[0] and lista[1] < lista[2]):
+        valorN2 = (lista[1]//2)
+        cont += valorN2
+    if(lista[0] == lista[2] and lista[0] < lista[1]):
+        valorN3 = (lista[0]//2)
+        cont += valorN3
+
+    if(valor1 == lista[1] and lista[2] > lista[0]):
+        valorN4 = (lista[2]//2)
+        cont += valorN4
+    if(lista[1] == lista[0] and lista[1] > lista[2]):
+        valorN5 = (lista[1]//2)
+        cont += valorN5
+    if(lista[0] == lista[2] and lista[0] > lista[1]):
+        valorN6 = (lista[0]//2)
+        cont += valorN6
+
+    if(soma == 8):
+        cont+=8
+
+    return cont
+
+a,b,c = input().split()
+d,e,f = input().split()
+
+a,b,c = int(a),int(b),int(c)
+d,e,f = int(d),int(e),int(f)
+
+paes = calculoPonto(a,b,c)
+willy = calculoPonto(d,e,f)
+
+if(paes == willy):
+    print("0")
+elif(paes > willy):
+    print("1")
+else:
+    print("2")
