@@ -1,0 +1,16 @@
+linhas,colunas = input().split()
+linhas,colunas = int(linhas),int(colunas)
+
+if(2 <= linhas <= 1000 and 2 <= colunas <= 1000):
+    matriz = []
+    for i in range(linhas):
+        matriz.append(input().split())
+
+    menorValor = -1
+    for linha in range(colunas):
+        soma = 0
+        for coluna in range(linhas):
+            soma += int(matriz[coluna][linha])
+        if(soma < menorValor or menorValor == -1):
+            menorValor = soma
+    print(menorValor)
