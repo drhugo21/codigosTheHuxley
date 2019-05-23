@@ -1,0 +1,8 @@
+def contR(quant):
+    for i in range(quant,0,-1):
+        string = ""
+        for j in range(i):
+            string += str(i) + "-"
+        print(string[:-1])
+        
+contR(int(input()))
