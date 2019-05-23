@@ -1,0 +1,41 @@
+def calcular_digito(cpf):
+    maiorD0,maiorD1,maiorD2,maiorD3 = "0","0","0","0"
+    soma = 0
+    
+    cpf = cpf.split(".")
+    quebraUltimo = cpf[2]
+    digitoV = quebraUltimo.split("-")
+
+    string0 = cpf[0]
+    string1 = cpf[1]
+    string2 = digitoV[0]
+    string3 = digitoV[1]
+
+    
+
+    for i in range(len(string0)):
+        if(string0[i] > maiorD0):
+            maiorD0 = string0[i]
+
+    for i in range(len(string1)):
+        if(string1[i] > maiorD1):
+            maiorD1 = string1[i]
+
+    for i in range(len(string2)):
+        if(string2[i] > maiorD2):
+            maiorD2 = string2[i]
+
+
+
+    soma = int(maiorD0) + int(maiorD1) + int(maiorD2)
+
+    if((soma%10) == int(string3)):
+        return "VALIDO"
+    else:
+        return "INVALIDO"
+
+
+pergunta = str(input()).upper()
+while(pergunta != "FIM"):
+    print(calcular_digito(pergunta))
+    pergunta = str(input()).upper()
