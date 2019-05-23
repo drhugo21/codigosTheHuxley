@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+
+public class HuxleyCode {
+  public static void main(String args[]) {
+	Scanner sc = new Scanner(System.in);
+	int dia = sc.nextInt();
+	switch (dia){
+	   case 1:
+	        System.out.print("janeiro");
+	        break;
+	   case 2:
+	        System.out.print("fevereiro");
+	        break;
+	   case 3:
+	        System.out.print("marco");
+	        break;
+	   case 4:
+	        System.out.print("abril");
+	        break;
+	   case 5:
+	        System.out.print("maio");
+	        break;
+	   case 6:
+	        System.out.print("junho");
+	        break;
+	   case 7:
+	        System.out.print("julho");
+	        break;
+	   case 8:
+	        System.out.print("agosto");
+	        break;
+	   case 9:
+	        System.out.print("setembro");
+	        break;
+	   case 10:
+	        System.out.print("outubro");
+	        break;
+	   case 11:
+	        System.out.print("novembro");
+	        break;
+	   case 12:
+	        System.out.print("dezembro");
+	        break;
+	   default:
+	        System.out.print("invalido");
+	        break;
+	}
+  }
+}
