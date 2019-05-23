@@ -1,0 +1,24 @@
+k = int(input())
+while(k != 0):
+    matriz = []
+    for i in range(4):
+        linha = []
+        for j in range(4):
+            linha.append(int(input()))
+        matriz.append(linha)
+    
+    for a in range(len(matriz)):
+        for b in range(len(linha)): 
+            variavelAuxiliar = matriz[a][b]
+            matriz[a][b] = matriz[b][a]
+            matriz[b][a] = variavelAuxiliar
+    
+    for c in range(len(matriz)):
+        for d in range(len(matriz)):
+            if(c == d):
+                print(matriz[d][c] * k,end=" ")
+            else:
+                print(matriz[d][c],end=" ")
+        print()
+
+    k = int(input())
