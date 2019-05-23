@@ -1,0 +1,5 @@
+def VolumeEsfera(raio):
+    return (4*3.1416*(raio*raio*raio))/3
+
+for i in range(3):
+    print("{:.2f}".format(VolumeEsfera(float(input()))))
