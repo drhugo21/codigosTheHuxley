@@ -1,0 +1,11 @@
+def velkmh(v0,a,t):
+    vf = v0 + (a*t)
+    return vf*3.6
+
+menorEntrada = 100000
+for i in range(3):
+    entrada = velkmh(float(input()),float(input()),float(input()))
+    if(entrada < menorEntrada):
+        menorEntrada = entrada
+
+print(menorEntrada)
