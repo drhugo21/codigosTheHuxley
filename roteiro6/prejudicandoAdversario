@@ -1,0 +1,16 @@
+ordemMatriz = int(input())
+
+matriz = []
+for i in range(ordemMatriz):
+    matriz.append(input().split())
+valor = 0
+for linha in range(ordemMatriz):
+    for coluna in range(ordemMatriz):
+        if(int(matriz[coluna][linha]) < 0):
+            valor = int(matriz[coluna][linha])*2
+            matriz[coluna][linha] = valor
+        if(coluna == ordemMatriz-1):
+           print(matriz[coluna][linha],end="")
+        else:
+           print(matriz[coluna][linha],end=" ")
+    print()
