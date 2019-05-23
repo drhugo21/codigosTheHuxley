@@ -1,0 +1,25 @@
+n,m,o = input().split()
+n,m,o = int(n),int(m),int(o)
+
+matrizA = []
+for linhaA in range(n):
+    matrizA.append(input().split())
+
+matrizB = []
+for linhaB in range(m):
+    matrizB.append(input().split())
+
+matrizC = []
+for linha in range(n):
+    matrizC.append([])
+    for coluna in range(o):
+        matrizC[linha].append(0)    
+        for k in range(m):
+            matrizC[linha][coluna] += int(matrizA[linha][k]) * int(matrizB[k][coluna])
+        if(coluna == int(o)-1):
+           print(matrizC[linha][coluna],end="")
+        else:
+           print(matrizC[linha][coluna],end=" ")
+    print()
+
+    
