@@ -1,0 +1,17 @@
+def CalculaMulta(velocidade):
+    multa = 0
+
+    if(velocidade < 50):
+        multa = 0
+    elif(velocidade > 50 and velocidade <= (50 + (50*0.1))):
+        multa = 230
+    elif( (velocidade > 50) and (velocidade >= (50 + (50*0.1))) and (velocidade <= (50 + (50*0.2))) ):
+        multa = 340
+    else:
+        kms = velocidade - 50
+        multa = kms * 19.28
+
+    return multa
+
+
+print("{:.2f}".format(CalculaMulta(int(input()))))
