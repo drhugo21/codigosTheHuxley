@@ -1,0 +1,20 @@
+matriz = []
+for linha in range(12):
+    matriz.append(input().split())
+
+dia,mes,melhorDia = "","",""
+dias = ["Primeiro Sabado","Primeiro Domingo", "Segundo Sabado", "Segundo Domingo", "Terceiro Sabado", "Terceiro Domingo", "Quarto Sabado","Quarto Domingo"]
+meses = ["Janeiro","Fevereiro","Marco","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
+mensagem = "Proximo ano eu tento denovo..."
+
+for linha in range(12):
+    for coluna in range(8):
+        if((melhorDia == "") or (matriz[linha][coluna] < melhorDia)):
+            melhorDia = matriz[linha][coluna]
+            dia = dias[coluna]
+            mes = meses[linha]
+
+if(melhorDia > "0.5"):
+    print(mensagem)
+else:
+    print("O melhor dia e no",dia,"de",mes)
